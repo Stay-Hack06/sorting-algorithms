@@ -57,6 +57,7 @@ selectionSortWords(unsortedWords);
 
 console.log("Sorted Words:", unsortedWords);
 
+
 // Question 3
 
 function insertionSortWords(arr) {
@@ -66,7 +67,7 @@ function insertionSortWords(arr) {
         let current = arr[i];
         let j = i - 1;
 
-        while (j >= 0 && arr[j] > current) {
+        while (j > -1 && current < arr[j]) {
             arr[j + 1] = arr[j];
             j--;
         }
@@ -77,8 +78,12 @@ function insertionSortWords(arr) {
     return arr;
 }
 
-const unSortedWords = ["javascript", "python", "c++", "ruby", "go"];
-console.log("Unsorted Words:", unSortedWords);
+// Exercise: Sort the array using the insertionSortWords function
+const unsortedWords = ["javascript", "python", "c++", "ruby", "go"];
+console.log("Unsorted Words:", unsortedWords);
 
-const sortedWords = insertionSortWords(unSortedWords);
+// Call the insertionSortWords function to sort the array
+const sortedWords = insertionSortWords(unsortedWords);
+
 console.log("Sorted Words:", sortedWords);
+
